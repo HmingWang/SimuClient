@@ -58,9 +58,8 @@ namespace client
                 tmp.Add(0);
                 obuff=tmp.ToArray();
                 socketClient.Send(obuff);
-                log("<<" + comm);
+                log("<<<" + comm);
                 tbxCommand.Text = "";
-
             }
             catch (Exception ex) {
                 log("发送消息失败！错误信息：" + ex.Message);
@@ -99,7 +98,7 @@ namespace client
                 while (socketClient.Connected && socketClient.Receive(ibuff) > 0)
                 {
                     str=System.Text.Encoding.Default.GetString(ibuff).TrimEnd('\0');
-                    log(">>" + str);
+                    log(">>>" + str);
                     ibuff = new byte[1024];                    
                 }
             }
@@ -109,5 +108,9 @@ namespace client
             }
         }
 
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            (new Form1()).Show();
+        }
     }
 }
