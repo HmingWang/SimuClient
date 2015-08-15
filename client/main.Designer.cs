@@ -28,14 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("红桃A");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("草花B");
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("红桃A");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("草花B");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             "111"}, -1);
             this.rtbMsg = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -49,18 +58,10 @@
             this.tbxPort = new System.Windows.Forms.TextBox();
             this.tbxIP = new System.Windows.Forms.TextBox();
             this.tbxCommand = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // rtbMsg
@@ -100,8 +101,95 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Desktop";
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(239, 380);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(164, 23);
+            this.button10.TabIndex = 8;
+            this.button10.Text = "【技能A】";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(239, 351);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(164, 23);
+            this.button9.TabIndex = 7;
+            this.button9.Text = "【技能A】";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(239, 322);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(164, 23);
+            this.button8.TabIndex = 6;
+            this.button8.Text = "【技能A】";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(239, 293);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(164, 23);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "【技能A】";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(239, 471);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(68, 23);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "【技能C】";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(239, 442);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(68, 23);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "【技能A】";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(239, 413);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(68, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "【技能A】";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::client.Properties.Resources.曹操;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 193);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(222, 301);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // listView1
+            // 
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
+            this.listView1.Location = new System.Drawing.Point(318, 413);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(658, 81);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button11);
             this.groupBox2.Controls.Add(this.btnNew);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label4);
@@ -225,90 +313,14 @@
             this.tbxCommand.Size = new System.Drawing.Size(501, 21);
             this.tbxCommand.TabIndex = 14;
             // 
-            // listView1
+            // button11
             // 
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7,
-            listViewItem8,
-            listViewItem9});
-            this.listView1.Location = new System.Drawing.Point(318, 413);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(658, 81);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 193);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 301);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(239, 413);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(68, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "【技能A】";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(239, 442);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(68, 23);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "【技能A】";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(239, 471);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(68, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "【技能C】";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(239, 293);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(164, 23);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "【技能A】";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(239, 322);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(164, 23);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "【技能A】";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(239, 351);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(164, 23);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "【技能A】";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(239, 380);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(164, 23);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "【技能A】";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button11.Location = new System.Drawing.Point(168, 76);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 26;
+            this.button11.Text = "角色选择";
+            this.button11.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -322,9 +334,9 @@
             this.Name = "Form1";
             this.Text = "测试客户端模拟器";
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,6 +368,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button11;
     }
 }
 
