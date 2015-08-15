@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("红桃A");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("草花B");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("红桃A");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("草花B");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             "111"}, -1);
             this.rtbMsg = new System.Windows.Forms.RichTextBox();
@@ -43,7 +43,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnNew = new System.Windows.Forms.Button();
@@ -59,9 +58,13 @@
             this.tbxIP = new System.Windows.Forms.TextBox();
             this.tbxCommand = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rtbMsg
@@ -85,6 +88,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.listView2);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.button10);
             this.groupBox1.Controls.Add(this.button9);
             this.groupBox1.Controls.Add(this.button8);
@@ -103,7 +109,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(239, 380);
+            this.button10.Location = new System.Drawing.Point(239, 348);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(164, 23);
             this.button10.TabIndex = 8;
@@ -112,7 +118,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(239, 351);
+            this.button9.Location = new System.Drawing.Point(239, 319);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(164, 23);
             this.button9.TabIndex = 7;
@@ -121,7 +127,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(239, 322);
+            this.button8.Location = new System.Drawing.Point(239, 290);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(164, 23);
             this.button8.TabIndex = 6;
@@ -130,7 +136,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(239, 293);
+            this.button7.Location = new System.Drawing.Point(239, 261);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(164, 23);
             this.button7.TabIndex = 5;
@@ -165,22 +171,12 @@
             this.button4.Text = "【技能A】";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::client.Properties.Resources.曹操;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 193);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 301);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // listView1
             // 
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.listView1.Location = new System.Drawing.Point(318, 413);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(658, 81);
@@ -322,6 +318,42 @@
             this.button11.Text = "角色选择";
             this.button11.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::client.Properties.Resources.曹操;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 193);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(222, 301);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(321, 395);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "手牌：";
+            // 
+            // listView2
+            // 
+            this.listView2.Location = new System.Drawing.Point(240, 215);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(162, 40);
+            this.listView2.TabIndex = 10;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(241, 193);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 12);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "判定区";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -334,9 +366,10 @@
             this.Name = "Form1";
             this.Text = "测试客户端模拟器";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,6 +402,9 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListView listView2;
     }
 }
 
