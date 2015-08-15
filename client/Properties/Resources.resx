@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,187 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="曹操" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\曹操.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="大乔" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\大乔.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="貂蝉" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\貂蝉.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="甘宁" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\甘宁.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="关羽" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\关羽.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="郭嘉" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\郭嘉.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="华佗" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\华佗.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="黄盖" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\黄盖.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="黄月英" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\黄月英.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="刘备" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\刘备.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="陆逊" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\陆逊.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="吕布" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\吕布.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="吕蒙" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\吕蒙.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="马超" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\马超.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="司马懿" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\司马懿.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="孙权" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\孙权.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="孙尚香" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\孙尚香.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="夏侯惇" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\夏侯惇.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="许诸" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\许诸.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="张飞" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\张飞.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="张辽" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\张辽.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="赵云" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\赵云.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="甄姬" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\甄姬.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="周瑜" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\周瑜.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="诸葛亮" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\诸葛亮.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="八卦阵" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\八卦阵.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="杀" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\杀.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="闪" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\闪.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="桃" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\桃.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="过河拆桥" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\过河拆桥.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="借刀杀人" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\借刀杀人.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="决斗" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\决斗.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="乐不思蜀" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\乐不思蜀.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="南蛮入侵" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\南蛮入侵.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="闪电" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\闪电.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="顺手牵羊" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\顺手牵羊.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="桃园结义" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\桃园结义.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="万箭齐发" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\万箭齐发.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="无懈可击" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\无懈可击.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="无中生有" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\无中生有.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="五谷丰登" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\五谷丰登.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="赤兔" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\赤兔.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="大宛" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\大宛.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="的卢" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\的卢.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="绝影" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\绝影.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="爪黄飞电" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\爪黄飞电.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="紫骍" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\紫骍.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="雌雄双剑" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\雌雄双剑.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="方天画戟" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\方天画戟.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="贯石斧" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\贯石斧.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="麒麟弓" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\麒麟弓.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="青钢剑" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\青钢剑.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="青龙偃月刀" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\青龙偃月刀.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="丈八蛇矛" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\丈八蛇矛.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="诸葛连弩" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\诸葛连弩.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="寒冰剑" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\寒冰剑.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="仁王盾" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\仁王盾.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="闪电1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\闪电1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="无懈" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\无懈.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

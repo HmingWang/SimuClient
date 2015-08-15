@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,6 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -76,6 +78,186 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\曹操.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\大乔.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\貂蝉.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\甘宁.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关羽.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\郭嘉.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\华佗.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黄盖.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黄月英.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\刘备.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\陆逊.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\吕布.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\吕蒙.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\马超.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\司马懿.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\孙权.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\孙尚香.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\夏侯惇.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\许诸.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\张飞.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\张辽.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\赵云.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\甄姬.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\周瑜.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\诸葛亮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\八卦阵.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\杀.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\闪.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\桃.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\过河拆桥.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\借刀杀人.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\决斗.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\乐不思蜀.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\南蛮入侵.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\闪电.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\顺手牵羊.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\桃园结义.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\万箭齐发.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\无懈可击.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\无中生有.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\五谷丰登.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\赤兔.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\大宛.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\的卢.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\绝影.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\爪黄飞电.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\紫骍.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\雌雄双剑.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方天画戟.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\贯石斧.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\麒麟弓.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\青钢剑.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\青龙偃月刀.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\丈八蛇矛.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\诸葛连弩.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\寒冰剑.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\仁王盾.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\闪电1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\无懈.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\EX\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
