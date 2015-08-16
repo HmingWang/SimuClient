@@ -25,7 +25,7 @@ namespace client
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnConnect_Click(object sender, EventArgs e)
         {
             if (socketClient!=null&& socketClient.Connected) {
                 log("服务器已连接！");
@@ -49,7 +49,7 @@ namespace client
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSend_Click(object sender, EventArgs e)
         {
             string comm = tbxCommand.Text;
             try
@@ -78,7 +78,7 @@ namespace client
             rtbMsg.ScrollToCaret();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             if (socketClient!=null&& socketClient.Connected) {
                 socketClient.Close();
@@ -113,7 +113,7 @@ namespace client
             (new Form1()).Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnSelect_Click(object sender, EventArgs e)
         {
 
         }
