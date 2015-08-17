@@ -45,17 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientService.cs" />
     <Compile Include="desktop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="desktop.Designer.cs">
       <DependentUpon>desktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="main.cs">
+    <Compile Include="Controler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main.Designer.cs">
-      <DependentUpon>main.cs</DependentUpon>
+    <Compile Include="Controler.Designer.cs">
+      <DependentUpon>Controler.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -74,8 +75,11 @@
     <EmbeddedResource Include="desktop.resx">
       <DependentUpon>desktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main.resx">
-      <DependentUpon>main.cs</DependentUpon>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controler.resx">
+      <DependentUpon>Controler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

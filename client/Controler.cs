@@ -13,18 +13,22 @@ using System.Threading;
 
 namespace client
 {
-    public partial class Form1 : Form
+    public partial class Controler : Form
     {
         private Socket socketClient;
         private delegate void dlgtFunc(string s);
         private byte[] obuff;
         private byte[] ibuff;
 
-        public Form1()
+        public Controler()
         {
             InitializeComponent();
         }
 
+        public RichTextBox GetLogContainer()
+        {
+            return this.rtbMsg;
+        }
         private void btnConnect_Click(object sender, EventArgs e)
         {
             if (socketClient!=null&& socketClient.Connected) {
@@ -110,12 +114,17 @@ namespace client
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            (new Form1()).Show();
+            (new Controler()).Show();
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            (new login()).Show();
         }
     }
 }
