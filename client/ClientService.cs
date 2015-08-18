@@ -9,17 +9,15 @@ using System.Threading;
 
 namespace client
 {
-    class ClientService
+    static class ClientService
     {
-        private Socket socketClient;
+        private static Socket socketClient;
         private delegate void dlgtFunc(string s);
-        private RichTextBox rtbMsg;
-        private byte[] obuff;
-        private byte[] ibuff;
+        private static RichTextBox rtbMsg;
+        private static byte[] obuff;
+        private static byte[] ibuff;
 
-        public ClientService(RichTextBox rtb) { this.rtbMsg = rtb; }
-
-        public void Connect(string strIP,string strPort)
+        public static void Connect(string strIP,string strPort)
         {
             if (socketClient != null && socketClient.Connected)
             {
@@ -45,7 +43,7 @@ namespace client
             }
         }
 
-        public void log(string str)
+        public static void log(string str)
         {
             if (rtbMsg.InvokeRequired)
             {
@@ -57,7 +55,7 @@ namespace client
             rtbMsg.ScrollToCaret();
         }
 
-        public void do_read()
+        public static void do_read()
         {
             //线程
             ibuff = new byte[1024];
@@ -78,7 +76,7 @@ namespace client
             }
         }
 
-        public void Send(string cmd)
+        public static void Send(string cmd)
         {
             string comm = cmd;
             try
@@ -97,7 +95,7 @@ namespace client
             }
         }
 
-        public void Close()
+        public static void Close()
         {
             if (socketClient != null && socketClient.Connected)
             {
@@ -106,5 +104,7 @@ namespace client
                 return;
             }
         }
+
+        public static void setLogContainer(RichTextBox rtb) { rtbMsg = rtb; }
     }
 }

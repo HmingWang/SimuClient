@@ -31,6 +31,7 @@
             this.rtbMsg = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.tbxPort = new System.Windows.Forms.TextBox();
             this.tbxIP = new System.Windows.Forms.TextBox();
             this.tbxCommand = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             this.rtbMsg.ForeColor = System.Drawing.Color.Lime;
             this.rtbMsg.Location = new System.Drawing.Point(12, 24);
             this.rtbMsg.Name = "rtbMsg";
-            this.rtbMsg.Size = new System.Drawing.Size(534, 335);
+            this.rtbMsg.Size = new System.Drawing.Size(760, 365);
             this.rtbMsg.TabIndex = 3;
             this.rtbMsg.Text = "";
             // 
@@ -83,11 +83,21 @@
             this.groupBox2.Controls.Add(this.tbxPort);
             this.groupBox2.Controls.Add(this.tbxIP);
             this.groupBox2.Controls.Add(this.tbxCommand);
-            this.groupBox2.Location = new System.Drawing.Point(12, 365);
+            this.groupBox2.Location = new System.Drawing.Point(12, 395);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(984, 210);
+            this.groupBox2.Size = new System.Drawing.Size(760, 155);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(87, 116);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "打开登录";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSelect
             // 
@@ -208,25 +218,15 @@
             this.tbxCommand.Size = new System.Drawing.Size(501, 21);
             this.tbxCommand.TabIndex = 14;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(87, 116);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "打开登录";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Form1
+            // Controler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.rtbMsg);
-            this.Name = "Form1";
+            this.Name = "Controler";
             this.Text = "测试客户端模拟器";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
