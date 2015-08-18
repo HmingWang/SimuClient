@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="chatroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chatroom.Designer.cs">
+      <DependentUpon>chatroom.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientService.cs" />
     <Compile Include="desktop.cs">
       <SubType>Form</SubType>
@@ -64,6 +70,7 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParserX.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="room.cs">
@@ -78,6 +85,9 @@
     <Compile Include="selectrole.Designer.cs">
       <DependentUpon>selectrole.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="chatroom.resx">
+      <DependentUpon>chatroom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="desktop.resx">
       <DependentUpon>desktop.cs</DependentUpon>
     </EmbeddedResource>

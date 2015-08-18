@@ -19,6 +19,18 @@ namespace client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!ClientService.isConnected())
+            {
+                ClientService.Connect("127.0.0.1", "1986");
+            }
+            string cmd = "105:" + tbxName.Text + rbman.Checked.ToString();
+            ClientService.Send(cmd);
+
+            new chatroom().Show();
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
 
         }
     }

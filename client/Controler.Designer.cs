@@ -51,6 +51,7 @@
             // rtbMsg
             // 
             this.rtbMsg.BackColor = System.Drawing.SystemColors.Desktop;
+            this.rtbMsg.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMsg.ForeColor = System.Drawing.Color.Lime;
             this.rtbMsg.Location = new System.Drawing.Point(12, 24);
             this.rtbMsg.Name = "rtbMsg";

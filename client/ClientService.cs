@@ -17,6 +17,8 @@ namespace client
         private static byte[] obuff;
         private static byte[] ibuff;
 
+        private static Dictionary<string, Form> dicForms;
+
         public static void Connect(string strIP,string strPort)
         {
             if (socketClient != null && socketClient.Connected)
@@ -106,5 +108,20 @@ namespace client
         }
 
         public static void setLogContainer(RichTextBox rtb) { rtbMsg = rtb; }
+
+        public static bool isConnected() { return socketClient!=null&&socketClient.Connected; }
+
+        public static Form Start()
+        {
+            dicForms = new Dictionary<string, Form>();
+            dicForms.Add("ctrl", new Controler());
+            dicForms["ctrl"].Show();
+            return dicForms["ctrl"];
+        }
+
+        public static Form GetFormByName(string name)
+        {
+            return dicForms[name];
+        }
     }
 }

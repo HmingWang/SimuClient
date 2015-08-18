@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbman = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,13 +47,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "昵称：";
             // 
-            // textBox1
+            // tbxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 21);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "独孤求败";
+            this.tbxName.Location = new System.Drawing.Point(70, 123);
+            this.tbxName.Name = "tbxName";
+            this.tbxName.Size = new System.Drawing.Size(150, 21);
+            this.tbxName.TabIndex = 1;
+            this.tbxName.Text = "独孤求败";
             // 
             // label2
             // 
@@ -64,16 +64,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "性别：";
             // 
-            // radioButton1
+            // rbman
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(73, 175);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(35, 16);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "男";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbman.AutoSize = true;
+            this.rbman.Location = new System.Drawing.Point(73, 175);
+            this.rbman.Name = "rbman";
+            this.rbman.Size = new System.Drawing.Size(35, 16);
+            this.rbman.TabIndex = 3;
+            this.rbman.TabStop = true;
+            this.rbman.Text = "男";
+            this.rbman.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -114,12 +114,13 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbman);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxName);
             this.Controls.Add(this.label1);
             this.Name = "login";
             this.Text = "login";
+            this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,9 +130,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbman;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
