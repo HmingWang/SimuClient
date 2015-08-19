@@ -51,7 +51,7 @@
             // 
             this.tbxName.Location = new System.Drawing.Point(70, 123);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(150, 21);
+            this.tbxName.Size = new System.Drawing.Size(96, 21);
             this.tbxName.TabIndex = 1;
             this.tbxName.Text = "独孤求败";
             // 
@@ -88,7 +88,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(91, 217);
+            this.button1.Location = new System.Drawing.Point(70, 219);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
@@ -120,6 +120,7 @@
             this.Controls.Add(this.label1);
             this.Name = "login";
             this.Text = "login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.login_FormClosed);
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

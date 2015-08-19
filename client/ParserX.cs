@@ -8,15 +8,15 @@ namespace client
 {
     static class ParserX
     {
-        private const string cstr_pullplayer = "107";
+        private const string cstr_pullplayer = "201";
 
-        static void ParserCmd(string strCmd)
+        public static void ParserCmd(string strCmd)
         {
             string[] strvar=strCmd.Split(':');
             switch (strvar[0])
             {
                 case cstr_pullplayer:
-                    
+                    ClientService.playerlist = strvar[1];
                     break;
                 default:
                     break;
