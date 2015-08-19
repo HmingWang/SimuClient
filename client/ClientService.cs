@@ -111,12 +111,9 @@ namespace client
 
         public static bool isConnected() { return socketClient!=null&&socketClient.Connected; }
 
-        public static Form Start()
+        public static Form Start(string name="ctrl")
         {
-            dicForms = new Dictionary<string, Form>();
-            dicForms.Add("ctrl", new Controler());
-            dicForms["ctrl"].Show();
-            return dicForms["ctrl"];
+            return FormFactory(name);
         }
 
         public static Form GetFormByName(string name)
@@ -145,7 +142,6 @@ namespace client
             dicForms.Add(name, formTmp);
             dicForms[name].Show();
             return formTmp;
-
         }
     }
 }
