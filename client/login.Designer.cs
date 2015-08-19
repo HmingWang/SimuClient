@@ -67,6 +67,7 @@
             // rbman
             // 
             this.rbman.AutoSize = true;
+            this.rbman.Checked = true;
             this.rbman.Location = new System.Drawing.Point(73, 175);
             this.rbman.Name = "rbman";
             this.rbman.Size = new System.Drawing.Size(35, 16);
@@ -82,7 +83,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(35, 16);
             this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "女";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 

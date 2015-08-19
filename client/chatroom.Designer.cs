@@ -30,15 +30,15 @@
         {
             this.splitContainerH = new System.Windows.Forms.SplitContainer();
             this.splitContainerV = new System.Windows.Forms.SplitContainer();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerH)).BeginInit();
             this.splitContainerH.Panel1.SuspendLayout();
             this.splitContainerH.Panel2.SuspendLayout();
@@ -92,14 +92,14 @@
             this.splitContainerV.SplitterDistance = 193;
             this.splitContainerV.TabIndex = 0;
             // 
-            // lblCount
+            // listBox1
             // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Location = new System.Drawing.Point(107, 9);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(11, 12);
-            this.lblCount.TabIndex = 0;
-            this.lblCount.Text = "0";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(12, 24);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(178, 436);
+            this.listBox1.TabIndex = 2;
             // 
             // label1
             // 
@@ -110,14 +110,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "当前在线人数：";
             // 
-            // listBox1
+            // lblCount
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(12, 24);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(178, 436);
-            this.listBox1.TabIndex = 2;
+            this.lblCount.AutoSize = true;
+            this.lblCount.Location = new System.Drawing.Point(107, 9);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(11, 12);
+            this.lblCount.TabIndex = 0;
+            this.lblCount.Text = "0";
             // 
             // richTextBox1
             // 
@@ -127,22 +127,22 @@
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
-            // label2
+            // btnSend
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 12);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "对";
+            this.btnSend.Location = new System.Drawing.Point(689, 14);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.TabIndex = 4;
+            this.btnSend.Text = "发送";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // comboBox1
+            // textBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(33, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(185, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(498, 21);
+            this.textBox1.TabIndex = 3;
             // 
             // label3
             // 
@@ -153,21 +153,22 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "说：";
             // 
-            // textBox1
+            // comboBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(498, 21);
-            this.textBox1.TabIndex = 3;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(33, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 1;
             // 
-            // btnSend
+            // label2
             // 
-            this.btnSend.Location = new System.Drawing.Point(689, 14);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
-            this.btnSend.TabIndex = 4;
-            this.btnSend.Text = "发送";
-            this.btnSend.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(17, 12);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "对";
             // 
             // chatroom
             // 

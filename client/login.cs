@@ -23,10 +23,10 @@ namespace client
             {
                 ClientService.Connect("127.0.0.1", "1986");
             }
-            string cmd = "105:" + tbxName.Text + rbman.Checked.ToString();
+            string cmd = "105:" + tbxName.Text + ";" + rbman.Checked.ToString();
             ClientService.Send(cmd);
 
-            new chatroom().Show();
+            ClientService.FormFactory("chatroom");
         }
 
         private void login_Load(object sender, EventArgs e)

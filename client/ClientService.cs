@@ -123,5 +123,29 @@ namespace client
         {
             return dicForms[name];
         }
+        public static Form FormFactory(string name)
+        {
+            Form formTmp=null;
+            name = name.ToLower();
+            switch (name)
+            {
+                case "controler":
+                case "ctrl":
+                    formTmp = new Controler();
+                    break;
+                case "login":
+                    formTmp = new login();
+                    break;
+                case "chatroom":
+                    formTmp = new chatroom();
+                    break;
+                default: break;
+
+            }
+            dicForms.Add(name, formTmp);
+            dicForms[name].Show();
+            return formTmp;
+
+        }
     }
 }
