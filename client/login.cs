@@ -27,11 +27,17 @@ namespace client
             ClientService.Send(cmd);
 
             ClientService.FormFactory("chatroom");
+            this.Close();
         }
 
         private void login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ClientService.RemoveForm("login");
         }
     }
 }

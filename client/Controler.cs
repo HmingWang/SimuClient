@@ -43,8 +43,6 @@ namespace client
 
         }
 
-
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             ClientService.Close();

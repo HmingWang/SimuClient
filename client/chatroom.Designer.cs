@@ -30,7 +30,7 @@
         {
             this.splitContainerH = new System.Windows.Forms.SplitContainer();
             this.splitContainerV = new System.Windows.Forms.SplitContainer();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxPlayerList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -81,7 +81,7 @@
             // 
             // splitContainerV.Panel1
             // 
-            this.splitContainerV.Panel1.Controls.Add(this.listBox1);
+            this.splitContainerV.Panel1.Controls.Add(this.lbxPlayerList);
             this.splitContainerV.Panel1.Controls.Add(this.label1);
             this.splitContainerV.Panel1.Controls.Add(this.lblCount);
             // 
@@ -92,14 +92,14 @@
             this.splitContainerV.SplitterDistance = 193;
             this.splitContainerV.TabIndex = 0;
             // 
-            // listBox1
+            // lbxPlayerList
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(12, 24);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(178, 436);
-            this.listBox1.TabIndex = 2;
+            this.lbxPlayerList.FormattingEnabled = true;
+            this.lbxPlayerList.ItemHeight = 12;
+            this.lbxPlayerList.Location = new System.Drawing.Point(12, 24);
+            this.lbxPlayerList.Name = "lbxPlayerList";
+            this.lbxPlayerList.Size = new System.Drawing.Size(178, 436);
+            this.lbxPlayerList.TabIndex = 2;
             // 
             // label1
             // 
@@ -178,6 +178,8 @@
             this.Controls.Add(this.splitContainerH);
             this.Name = "chatroom";
             this.Text = "聊天室";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.chatroom_FormClosed);
+            this.Load += new System.EventHandler(this.chatroom_Load);
             this.splitContainerH.Panel1.ResumeLayout(false);
             this.splitContainerH.Panel2.ResumeLayout(false);
             this.splitContainerH.Panel2.PerformLayout();
@@ -198,7 +200,7 @@
         private System.Windows.Forms.SplitContainer splitContainerV;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxPlayerList;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -16,6 +16,7 @@ namespace client
         private static RichTextBox rtbMsg;
         private static byte[] obuff;
         private static byte[] ibuff;
+        public static string playerlist; 
 
         private static Dictionary<string, Form> dicForms;
 
@@ -70,6 +71,7 @@ namespace client
                     str = System.Text.Encoding.Default.GetString(ibuff).TrimEnd('\0');
                     log(">>>" + str);
                     ibuff = new byte[1024];
+                    ParserX.ParserCmd(str);
                 }
             }
             catch (Exception ex)
@@ -107,9 +109,15 @@ namespace client
             }
         }
 
-        public static void setLogContainer(RichTextBox rtb) { rtbMsg = rtb; }
+        public static void setLogContainer(RichTextBox rtb)
+        {
+            rtbMsg = rtb;
+        }
 
-        public static bool isConnected() { return socketClient!=null&&socketClient.Connected; }
+        public static bool isConnected()
+        {
+            return socketClient != null && socketClient.Connected;
+        }
 
         public static Form Start(string name="ctrl")
         {
@@ -120,6 +128,7 @@ namespace client
         {
             return dicForms[name];
         }
+
         public static Form FormFactory(string name)
         {
             Form formTmp=null;
@@ -142,6 +151,11 @@ namespace client
             dicForms.Add(name, formTmp);
             dicForms[name].Show();
             return formTmp;
+        }
+
+        public static void RemoveForm(string name)
+        {
+            dicForms.Remove(name);
         }
     }
 }

@@ -17,9 +17,25 @@ namespace client
             InitializeComponent();
         }
 
+        public void AddPlayer(string name)
+        {
+            this.lbxPlayerList.Items.Add(name);
+            this.lblCount.Text = this.lbxPlayerList.Items.Count.ToString();
+        }
+
         private void btnSend_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void chatroom_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ClientService.RemoveForm("chatroom");
+        }
+
+        private void chatroom_Load(object sender, EventArgs e)
+        {
+            ClientService.Send("107");
         }
     }
 }
