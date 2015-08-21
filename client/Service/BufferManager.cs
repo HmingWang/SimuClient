@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AsyncServer
+namespace AsyncService
 {
     // This class creates a single large buffer which can be divided up 
     // and assigned to SocketAsyncEventArgs objects for use with each 

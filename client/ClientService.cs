@@ -33,15 +33,12 @@ namespace client
 
             try
             {
-                //socketClient.Connect(ip, int.Parse(port));
-                //log("连接服务器成功：" + ip + port);
+                socketClient.Connect(ip, int.Parse(port));
+                log("连接服务器成功：" + ip + port);
 
-                //Thread t = new Thread(do_read);
-                //t.IsBackground = true;
-                //t.Start();
-                var e = new SocketAsyncEventArgs();
-                
-                socketClient.ConnectAsync(new SocketAsyncEventArgs())
+                Thread t = new Thread(do_read);
+                t.IsBackground = true;
+                t.Start();
             }
             catch (Exception ex)
             {
@@ -124,6 +121,7 @@ namespace client
 
         public static Form Start(string name="ctrl")
         {
+            dicForms = new Dictionary<string, Form>();
             return FormFactory(name);
         }
 

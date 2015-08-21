@@ -2,7 +2,7 @@
 using System.Net.Sockets;
 using System.Collections.Generic;
 
-namespace AsyncServer
+namespace AsyncService
 {
     public class AsyncUserToken
     {

@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AsyncServer
+namespace AsyncService
 {
     // Represents a collection of reusable SocketAsyncEventArgs objects.  
     class SocketAsyncEventArgsPool
