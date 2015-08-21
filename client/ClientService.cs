@@ -33,12 +33,15 @@ namespace client
 
             try
             {
-                socketClient.Connect(ip, int.Parse(port));
-                log("连接服务器成功：" + ip + port);
+                //socketClient.Connect(ip, int.Parse(port));
+                //log("连接服务器成功：" + ip + port);
 
-                Thread t = new Thread(do_read);
-                t.IsBackground = true;
-                t.Start();
+                //Thread t = new Thread(do_read);
+                //t.IsBackground = true;
+                //t.Start();
+                var e = new SocketAsyncEventArgs();
+                
+                socketClient.ConnectAsync(new SocketAsyncEventArgs())
             }
             catch (Exception ex)
             {

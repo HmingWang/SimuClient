@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Service\AsyncUserToken.cs" />
+    <Compile Include="Service\BufferManager.cs" />
     <Compile Include="chatroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +87,8 @@
     <Compile Include="selectrole.Designer.cs">
       <DependentUpon>selectrole.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\Server.cs" />
+    <Compile Include="Service\SocketAsyncEventArgsPool.cs" />
     <EmbeddedResource Include="chatroom.resx">
       <DependentUpon>chatroom.cs</DependentUpon>
     </EmbeddedResource>
