@@ -19,8 +19,13 @@ namespace client
 
         public void AddPlayer(string name)
         {
-            this.lbxPlayerList.Items.Add(name);
-            this.lblCount.Text = this.lbxPlayerList.Items.Count.ToString();
+            this.Invoke(new MethodInvoker(delegate ()
+
+            {
+                this.lbxPlayerList.Items.Add(name);
+                this.lblCount.Text = this.lbxPlayerList.Items.Count.ToString();
+            }));
+
         }
 
         private void btnSend_Click(object sender, EventArgs e)

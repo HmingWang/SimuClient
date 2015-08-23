@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Sockets;
@@ -16,9 +17,8 @@ namespace client
         private static RichTextBox rtbMsg;
         private static byte[] obuff;
         private static byte[] ibuff;
-        public static string playerlist; 
-
         private static Dictionary<string, Form> dicForms;
+        public static AsyncService.Service srv;
 
         public static void Connect(string strIP,string strPort)
         {
@@ -121,12 +121,18 @@ namespace client
 
         public static Form Start(string name="ctrl")
         {
+            srv = new AsyncService.Service(1,1024);
             dicForms = new Dictionary<string, Form>();
             return FormFactory(name);
         }
 
         public static Form GetFormByName(string name)
         {
+            if (dicForms[name].IsDisposed)
+            {
+                log(String.Format("window {0} is disposed...", name));
+                return null;
+            } 
             return dicForms[name];
         }
 

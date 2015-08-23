@@ -13,7 +13,7 @@ namespace AsyncService
     // After accepting a connection, all data read from the client 
     // is sent back to the client. The read and echo back to the client pattern 
     // is continued until the client disconnects.
-    class AsyncService
+    class Service
     {
         //最大连接数
         private int m_numConnections;   // the maximum number of connections the sample is designed to handle simultaneously 
@@ -43,7 +43,7 @@ namespace AsyncService
         //
         // <param name="numConnections">the maximum number of connections the sample is designed to handle simultaneously</param>
         // <param name="receiveBufferSize">buffer size to use for each socket I/O operation</param>
-        public AsyncService(int numConnections, int receiveBufferSize)
+        public Service(int numConnections, int receiveBufferSize)
         {
             m_totalBytesRead = 0;
             m_numConnectedSockets = 0;
@@ -56,6 +56,8 @@ namespace AsyncService
 
             m_readWritePool = new SocketAsyncEventArgsPool(numConnections);
             m_maxNumberAcceptedClients = new Semaphore(numConnections, numConnections);
+
+            Init();
         }
 
         // Initializes the server by preallocating reusable buffers and 
@@ -94,7 +96,7 @@ namespace AsyncService
         //
         // <param name="localEndPoint">The endpoint which the server will listening 
         // for connection requests on</param>
-        public void Start(IPEndPoint localEndPoint)
+        public void StartServer(IPEndPoint localEndPoint)
         {
             // create the socket which listens for incoming connections
             listenSocket = new Socket(localEndPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
@@ -109,6 +111,10 @@ namespace AsyncService
             //Console.WriteLine("{0} connected sockets with one outstanding receive posted to each....press any key", m_outstandingReadCount);
             Console.WriteLine("Press any key to terminate the server process....");
             Console.ReadKey();
+        }
+        public void StartClinet(IPEndPoint remoteEndPoint)
+        {
+            StartConnect(remoteEndPoint);
         }
 
 
@@ -219,7 +225,11 @@ namespace AsyncService
 
         private void ProcessConnect(SocketAsyncEventArgs e)
         {
-            Console.WriteLine("Client connect to Server. ");
+            if (e.ConnectSocket== null)
+            {
+                Console.WriteLine("连接客户端失败 {0}",e.SocketError);
+                return;
+            }
 
             SocketAsyncEventArgs readEventArgs = m_readWritePool.Pop();
             ((AsyncUserToken)readEventArgs.UserToken).Socket = e.ConnectSocket; //设置UserToken变量
