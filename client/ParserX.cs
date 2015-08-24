@@ -17,9 +17,7 @@ namespace client
             {
                 case cstr_pullplayer:
                     string playerlist = strvar[1];
-                    ((chatroom)ClientService.GetFormByName("chatroom")).AddPlayer(playerlist);
-
-
+                    ((chatroom)ClientService.GetFormByName("chatroom")).SetPlayerList(playerlist);                        
                     break;
                 default:
                     break;

@@ -17,13 +17,18 @@ namespace client
             InitializeComponent();
         }
 
-        public void AddPlayer(string name)
+        public void SetPlayerList(string names)
         {
+            string[] list = names.Split(';');
+           
             this.Invoke(new MethodInvoker(delegate ()
-
             {
-                this.lbxPlayerList.Items.Add(name);
-                this.lblCount.Text = this.lbxPlayerList.Items.Count.ToString();
+                this.lblCount.Text = list.Count().ToString();
+                foreach (string p in names.Split(';'))
+                {
+                    this.lbxPlayerList.Items.Add(p.Split(',')[0]);
+
+                }
             }));
 
         }
