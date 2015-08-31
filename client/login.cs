@@ -23,9 +23,9 @@ namespace client
             {
                 ClientService.Connect("127.0.0.1", "1986");
             }
-            string cmd = "105:" + tbxName.Text + ";" + rbman.Checked.ToString();
+            string sex= (rbman.Checked) ? "1" : "0";
+            string cmd = "105:" + tbxName.Text + ";" + sex;
             ClientService.Send(cmd);
-
             ClientService.FormFactory("chatroom");
             this.Close();
         }

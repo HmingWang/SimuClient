@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerH)).BeginInit();
             this.splitContainerH.Panel1.SuspendLayout();
             this.splitContainerH.Panel2.SuspendLayout();
@@ -63,6 +64,7 @@
             // 
             // splitContainerH.Panel2
             // 
+            this.splitContainerH.Panel2.Controls.Add(this.button1);
             this.splitContainerH.Panel2.Controls.Add(this.btnSend);
             this.splitContainerH.Panel2.Controls.Add(this.textBox1);
             this.splitContainerH.Panel2.Controls.Add(this.label3);
@@ -70,7 +72,7 @@
             this.splitContainerH.Panel2.Controls.Add(this.label2);
             this.splitContainerH.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainerH.Size = new System.Drawing.Size(784, 561);
-            this.splitContainerH.SplitterDistance = 468;
+            this.splitContainerH.SplitterDistance = 503;
             this.splitContainerH.TabIndex = 0;
             // 
             // splitContainerV
@@ -88,17 +90,20 @@
             // splitContainerV.Panel2
             // 
             this.splitContainerV.Panel2.Controls.Add(this.richTextBox1);
-            this.splitContainerV.Size = new System.Drawing.Size(784, 468);
-            this.splitContainerV.SplitterDistance = 193;
+            this.splitContainerV.Size = new System.Drawing.Size(784, 503);
+            this.splitContainerV.SplitterDistance = 192;
             this.splitContainerV.TabIndex = 0;
             // 
             // lbxPlayerList
             // 
+            this.lbxPlayerList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbxPlayerList.FormattingEnabled = true;
             this.lbxPlayerList.ItemHeight = 12;
             this.lbxPlayerList.Location = new System.Drawing.Point(12, 24);
             this.lbxPlayerList.Name = "lbxPlayerList";
-            this.lbxPlayerList.Size = new System.Drawing.Size(178, 436);
+            this.lbxPlayerList.Size = new System.Drawing.Size(177, 472);
             this.lbxPlayerList.TabIndex = 2;
             // 
             // label1
@@ -121,17 +126,21 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(3, 24);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(572, 436);
+            this.richTextBox1.Size = new System.Drawing.Size(576, 470);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(689, 14);
+            this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSend.Location = new System.Drawing.Point(625, 14);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.Size = new System.Drawing.Size(83, 25);
             this.btnSend.TabIndex = 4;
             this.btnSend.Text = "发送";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -141,7 +150,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(185, 16);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(498, 21);
+            this.textBox1.Size = new System.Drawing.Size(430, 21);
             this.textBox1.TabIndex = 3;
             // 
             // label3
@@ -169,6 +178,15 @@
             this.label2.Size = new System.Drawing.Size(17, 12);
             this.label2.TabIndex = 0;
             this.label2.Text = "对";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(723, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 39);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "开始游戏";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // chatroom
             // 
@@ -207,5 +225,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.Button button1;
     }
 }

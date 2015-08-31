@@ -119,7 +119,7 @@ namespace client
             return socketClient != null && socketClient.Connected;
         }
 
-        public static Form Start(string name="ctrl")
+        public static Form Start(string name="main")
         {
             srv = new AsyncService.Service(1,1024);
             dicForms = new Dictionary<string, Form>();
@@ -140,11 +140,15 @@ namespace client
         {
             Form formTmp=null;
             name = name.ToLower();
+            if (dicForms.ContainsKey(name))
+            {
+                dicForms[name].Show();
+                return dicForms[name];
+            }
             switch (name)
             {
-                case "controler":
-                case "ctrl":
-                    formTmp = new Controler();
+                case "main":
+                    formTmp = new main();
                     break;
                 case "login":
                     formTmp = new login();

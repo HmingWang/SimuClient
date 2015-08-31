@@ -15,13 +15,13 @@ using AsyncService;
 
 namespace client
 {
-    public partial class Controler : Form
+    public partial class main : Form
     {
 
         private delegate void dlgtFunc(string s);
 
 
-        public Controler()
+        public main()
         {
             InitializeComponent();
             ClientService.setLogContainer(this.GetLogContainer());
@@ -54,7 +54,7 @@ namespace client
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            (new Controler()).Show();
+            (new main()).Show();
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
