@@ -32,12 +32,39 @@ namespace client
 
         private void login_Load(object sender, EventArgs e)
         {
-
+            this.btnRandName.PerformClick();
         }
 
         private void login_FormClosed(object sender, FormClosedEventArgs e)
         {
             ClientService.RemoveForm("login");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string[] names = {
+                "独孤求败",
+                "东方不败",
+                "善财童子",
+                "黑山老妖",
+                "东郭先生",
+                "小李飞刀",
+                "西门吹雪",
+                "花满楼",
+                "陆小凤",
+                "乔峰",
+                "南宫飞云",
+                "百里屠苏",
+                "李逍遥",
+                "赵灵儿",
+                "林月如",
+                "韦小宝",
+                "小龙女",
+                "郭靖",
+                "黄蓉",
+                "杨过"
+            };
+            this.tbxName.Text = names[(new Random()).Next(0, names.Length) % names.Length];
         }
     }
 }

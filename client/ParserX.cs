@@ -9,6 +9,7 @@ namespace client
     static class ParserX
     {
         private const string cstr_pullplayer = "201";
+        private const string cstr_pullchat = "202";
 
         public static void ParserCmd(string strCmd)
         {
@@ -19,7 +20,11 @@ namespace client
                     string playerlist = strvar[1];
                     ((chatroom)ClientService.GetFormByName("chatroom")).SetPlayerList(playerlist);                        
                     break;
+                case cstr_pullchat:
+                    ((chatroom)ClientService.GetFormByName("chatroom")).Chat(strvar[1]);
+                    break;
                 default:
+   
                     break;
             }
         }

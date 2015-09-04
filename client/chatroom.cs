@@ -23,6 +23,7 @@ namespace client
             this.Invoke(new MethodInvoker(delegate ()
             {
                 int count = 0;
+                this.lbxPlayerList.Items.Clear();
                 
                 foreach (string p in names.Split(';'))
                 {
@@ -31,13 +32,23 @@ namespace client
                     count++;
                 }
                 this.lblCount.Text = count.ToString();
+
             }));
 
         }
 
+        public void Chat(string msg)
+        {
+            this.Invoke(new MethodInvoker(delegate () 
+            {
+                rtbMessage.AppendText(msg + Environment.NewLine);
+                rtbMessage.ScrollToCaret();
+            }));
+        }
+
         private void btnSend_Click(object sender, EventArgs e)
         {
-            
+            ClientService.Send("103:" +tbxMessage.Text);
         }
 
         private void chatroom_FormClosed(object sender, FormClosedEventArgs e)
@@ -48,6 +59,20 @@ namespace client
         private void chatroom_Load(object sender, EventArgs e)
         {
             ClientService.Send("107");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxMessage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.btnSend.PerformClick();
+                this.tbxMessage.Text = "";
+            }
         }
     }
 }

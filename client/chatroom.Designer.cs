@@ -33,13 +33,13 @@
             this.lbxPlayerList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbMessage = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxMessage = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerH)).BeginInit();
             this.splitContainerH.Panel1.SuspendLayout();
             this.splitContainerH.Panel2.SuspendLayout();
@@ -66,7 +66,7 @@
             // 
             this.splitContainerH.Panel2.Controls.Add(this.button1);
             this.splitContainerH.Panel2.Controls.Add(this.btnSend);
-            this.splitContainerH.Panel2.Controls.Add(this.textBox1);
+            this.splitContainerH.Panel2.Controls.Add(this.tbxMessage);
             this.splitContainerH.Panel2.Controls.Add(this.label3);
             this.splitContainerH.Panel2.Controls.Add(this.comboBox1);
             this.splitContainerH.Panel2.Controls.Add(this.label2);
@@ -89,7 +89,7 @@
             // 
             // splitContainerV.Panel2
             // 
-            this.splitContainerV.Panel2.Controls.Add(this.richTextBox1);
+            this.splitContainerV.Panel2.Controls.Add(this.rtbMessage);
             this.splitContainerV.Size = new System.Drawing.Size(784, 503);
             this.splitContainerV.SplitterDistance = 192;
             this.splitContainerV.TabIndex = 0;
@@ -124,16 +124,26 @@
             this.lblCount.TabIndex = 0;
             this.lblCount.Text = "0";
             // 
-            // richTextBox1
+            // rtbMessage
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.rtbMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(3, 24);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(576, 470);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rtbMessage.Location = new System.Drawing.Point(3, 24);
+            this.rtbMessage.Name = "rtbMessage";
+            this.rtbMessage.Size = new System.Drawing.Size(576, 470);
+            this.rtbMessage.TabIndex = 0;
+            this.rtbMessage.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(723, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 39);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "开始游戏";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSend
             // 
@@ -146,12 +156,13 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // textBox1
+            // tbxMessage
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(430, 21);
-            this.textBox1.TabIndex = 3;
+            this.tbxMessage.Location = new System.Drawing.Point(185, 16);
+            this.tbxMessage.Name = "tbxMessage";
+            this.tbxMessage.Size = new System.Drawing.Size(430, 21);
+            this.tbxMessage.TabIndex = 3;
+            this.tbxMessage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxMessage_KeyPress);
             // 
             // label3
             // 
@@ -179,15 +190,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "对";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(723, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 39);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "开始游戏";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // chatroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -195,6 +197,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.splitContainerH);
             this.Name = "chatroom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "聊天室";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.chatroom_FormClosed);
             this.Load += new System.EventHandler(this.chatroom_Load);
@@ -219,11 +222,11 @@
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbxPlayerList;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbMessage;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxMessage;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button button1;
     }

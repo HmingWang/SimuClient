@@ -45,6 +45,7 @@
             this.tbxPort = new System.Windows.Forms.TextBox();
             this.tbxIP = new System.Windows.Forms.TextBox();
             this.tbxCommand = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             this.rtbMsg.ForeColor = System.Drawing.Color.Lime;
             this.rtbMsg.Location = new System.Drawing.Point(12, 24);
             this.rtbMsg.Name = "rtbMsg";
-            this.rtbMsg.Size = new System.Drawing.Size(359, 356);
+            this.rtbMsg.Size = new System.Drawing.Size(399, 525);
             this.rtbMsg.TabIndex = 3;
             this.rtbMsg.Text = "";
             // 
@@ -70,6 +71,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.tbxCommand);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btnSelect);
             this.groupBox2.Controls.Add(this.btnNew);
@@ -83,10 +86,9 @@
             this.groupBox2.Controls.Add(this.btnSend);
             this.groupBox2.Controls.Add(this.tbxPort);
             this.groupBox2.Controls.Add(this.tbxIP);
-            this.groupBox2.Controls.Add(this.tbxCommand);
-            this.groupBox2.Location = new System.Drawing.Point(376, 12);
+            this.groupBox2.Location = new System.Drawing.Point(417, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(346, 368);
+            this.groupBox2.Size = new System.Drawing.Size(355, 537);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
@@ -219,15 +221,26 @@
             this.tbxCommand.Size = new System.Drawing.Size(198, 21);
             this.tbxCommand.TabIndex = 14;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(96, 165);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "退出";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 392);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.rtbMsg);
             this.Name = "main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "测试客户端模拟器";
             this.Load += new System.EventHandler(this.Controler_Load);
             this.groupBox2.ResumeLayout(false);
@@ -255,6 +268,7 @@
         private System.Windows.Forms.TextBox tbxCommand;
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
